@@ -7,9 +7,10 @@
         <br>
         <p> 
             <% composeParas.forEach(function(blog){ %>
+
                 <hr>
                 <h1><%= blog.title %></h1>
-                <p><%= blog.para %></p>
+                <p><%= blog.para.substring(0,100) + "..."  %>  <a href="/post/<%= blog.title %>">Read more</a></p>
                 <hr>
                 <%  })    %>
                 
